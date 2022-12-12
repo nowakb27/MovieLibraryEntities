@@ -1,12 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using System.IO;
+using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace MovieLibraryOO.Migrations
+namespace MovieLibraryEntities.Migrations
 {
     public partial class InsertGenresAndMovies : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Migrations", "Data", @"5-InsertGenresAndMovies.sql");
+            var sqlFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "SQL", @"5-InsertGenresAndMovies.sql");
             migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
 

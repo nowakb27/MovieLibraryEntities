@@ -1,5 +1,7 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using MovieLibraryEntities;
 using MovieLibraryEntities.Models;
 
 namespace MovieLibraryEntities.Context
@@ -20,9 +22,8 @@ namespace MovieLibraryEntities.Context
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            optionsBuilder.UseSqlServer(
-                configuration.GetConnectionString("MovieContext")
-            );
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("MovieContext"));
+
         }
     }
 }

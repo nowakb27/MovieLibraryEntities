@@ -1,4 +1,8 @@
-﻿namespace MovieLibraryEntities.Models
+﻿using System;
+using System.Collections.Generic;
+using MovieLibraryEntities.Models;
+
+namespace MovieLibraryEntities.Models
 {
     public class User
     {
